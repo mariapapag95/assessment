@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+  <div>
+        <input 
+        id = "number"
+        placeholder = "Enter an integer"/>
+        <button
+        onclick="triangle()"
+        id = "button">
+        TRIANGLE
+        </button>
+    <p id = "triangle"> s </p>
+  </div>
+
+
+  <script>
+    triangle = function(){
+      const num = document.getElementById("number").value
+      console.log(num)
+      let tri = document.getElementById("triangle").value
+      tri = []
+      for (i = 1; i <= num; i++){
+        tri.push("*".repeat(i))
+    }
+    document.getElementById("triangle").innerHTML = tri.join("<br>");
+  }
+  </script>
+
+</body>
+</html>
